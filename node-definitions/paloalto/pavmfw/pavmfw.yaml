@@ -1,0 +1,61 @@
+id: PAvFW
+general:
+  description: Palo Alto Virtual Firewall
+  nature: firewall
+  read_only: false
+device:
+  interfaces:
+    has_loopback_zero: false
+    physical:
+      - Management
+      - Data1
+      - Data2
+      - Data3
+      - Data4
+      - Data5
+      - Data6
+      - Data7
+      - Data8
+      - Data9
+    serial_ports: 1
+    default_count: 2
+ui:
+  visible: true
+  description: |-
+    Palo Alto Virtual Firewall
+    10 Interfaces. 1 Management, 1 Data, and 8 additional.
+    Download qcow image using your Palo Alto support account.
+    Default user / pass = admin / admin.
+  label_prefix: pafw-
+  icon: firewall
+  label: PAvFW
+sim:
+  linux_native:
+    libvirt_domain_driver: kvm
+    driver: server
+    disk_driver: virtio
+    ram: 4500
+    cpus: 2
+    cpu_limit: 100
+    nic_driver: virtio
+    data_volume: 60
+    boot_disk_size: 60
+boot:
+  timeout: 450
+inherited:
+  image:
+    ram: true
+    cpus: true
+    cpu_limit: true
+    data_volume: true
+    boot_disk_size: true
+  node:
+    ram: true
+    cpus: true
+    cpu_limit: true
+    data_volume: true
+    boot_disk_size: true
+configuration:
+  generator:
+    driver: null
+schema_version: 0.0.1

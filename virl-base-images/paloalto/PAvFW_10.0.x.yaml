@@ -1,0 +1,13 @@
+id: PAvFW_10.0.x
+node_definition_id: PAvFW
+description: Palo Alto Virtual Firewall
+label: PAvFW
+disk_image: PA-VM-KVM-10.0.1.qcow2
+read_only: false
+ram: 4500
+cpus: 2
+cpu_limit: 100
+data_volume: 60
+boot_disk_size: 60
+disk_subfolder: PAvFW_10.0.x
+schema_version: 0.0.1
